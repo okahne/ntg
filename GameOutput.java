@@ -2,9 +2,8 @@ package ntg;
 
 public class GameOutput {
 
-	public void show(GameWorld world) {
-		// TODO Auto-generated method stub
-		
+	public void show(String update) {
+		System.out.println(update);
 	}
 
 }

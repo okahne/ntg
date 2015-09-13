@@ -11,6 +11,7 @@ public class Game {
 		game.startUp();
 		while (true){
 			game.updateState();
+			System.exit(0);
 		}
 
 	}
@@ -19,11 +20,13 @@ public class Game {
 		this.inputSocket = new GameInput();
 		this.outputSocket = new GameOutput();
 		this.world = new GameWorld();
+		this.outputSocket.show("Hej du har skapat en värld!");
+		this.outputSocket.show(this.world.toString());
 	}
 	
 	public void updateState(){
-		this.world.update(this.inputSocket.getAction(this.world));
-		this.outputSocket.show(this.world);
+		this.outputSocket.show(this.world.update());
+		
 	}
 
 }

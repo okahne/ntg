@@ -13,6 +13,10 @@ public class Person {
 		this.name = this.generateName();
 	}
 	
+	public String toString(){
+		return name;
+	}
+	
 	private String generateName(){
 		//TODO: Get more and better names from list
 		String[] names = {"Abdera",
